@@ -1,5 +1,5 @@
 {
-  "name": "aibnb_clone",
+  "name": "airbnb_clone",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.4",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^5.2.0",
     "zustand": "^4.5.2"
   },
