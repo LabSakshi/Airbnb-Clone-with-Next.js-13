@@ -24,7 +24,9 @@ export const authOptions: AuthOptions = {
         password: { label: "password", type: "password" },
       },
 
+      //when we wil call signin in UI this will be triggered
       async authorize(credentials) {
+        console.log(credentials, 'credentials')
         if (!credentials?.email || !credentials.password) {
           throw new Error("Invalid credentials");
         }
@@ -57,9 +59,10 @@ export const authOptions: AuthOptions = {
     signIn: "/",
   },
   debug: process.env.NODE_ENV === "development",
-  session:{
-    strategy:'jwt'
-  }
+  session: {
+    strategy: "jwt",
+  },
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 export default NextAuth(authOptions);
